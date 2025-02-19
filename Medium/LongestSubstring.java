@@ -27,17 +27,17 @@ public class LongestSubstring {
     public static int longestSubstring(String s){
         int max=0;
         Set<Character> set = new HashSet<>();
-        int i=0,j=0;
-        while(i<s.length()){
+        int right=0,left=0;
+        while(right<s.length()){
             // if you try to add a duplicate element to a HashSet, 
             //the duplicate will simply be ignored, and the HashSet will remain unchanged.
-            boolean isAdded =set.add(s.charAt(i));
-            if(isAdded){
-                max = Math.max(max, i-j+1);
-                i++;
-            }else{
-                set.remove(s.charAt(j));
-                j++;
+            boolean isAdded =set.add(s.charAt(right));
+            if(isAdded){//if added is set
+                max = Math.max(max, right-left+1);
+                right++;
+            }else{// if not added in set
+                set.remove(s.charAt(left));
+                left++;
             }
         }
         return max;
