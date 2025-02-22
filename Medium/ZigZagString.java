@@ -41,7 +41,7 @@ public class ZigZagString {
         if(numRows==1 || numRows>=s.length()){
             return s;
         }
-        //Initilize the array of ArrayList - 2d array
+        //Initialize the array of ArrayList - 2d array
         List<Character> rows[] = new ArrayList[numRows];
         for (int i = 0; i < numRows; i++) {
             rows[i] = new ArrayList<>();
