@@ -53,11 +53,11 @@ public class RottenOranges {
         }
         int maxtime = 0;
         // how to calculate adjacent cells row and colums values
-        // (row-1,col)
-        // |
+        //               (row-1,col)
+        //                    |
         // (row,col-1) -- (row,col) -- (row,col+1)
-        // |
-        // (row+1,col)
+        //                    |
+        //               (row+1,col)
 
         int adjacentRow[] = { -1, 0, +1, 0 };
         int adjacentCol[] = { 0, +1, 0, -1 };
